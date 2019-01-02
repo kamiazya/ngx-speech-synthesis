@@ -1,10 +1,22 @@
-import { NgModule } from '@angular/core';
-import { SpeechSynthesisComponent } from './speech-synthesis.component';
+import { NgModule, ModuleWithProviders } from '@angular/core';
+import { SpeechSynthesisUtteranceConfig, Config } from './configs';
 
 @NgModule({
-  declarations: [SpeechSynthesisComponent],
-  imports: [
-  ],
-  exports: [SpeechSynthesisComponent]
+  declarations: [],
+  imports: [],
+  exports: []
 })
-export class SpeechSynthesisModule { }
+export class SpeechSynthesisModule {
+
+  static forRoot(config: SpeechSynthesisUtteranceConfig): ModuleWithProviders {
+    return {
+      ngModule: SpeechSynthesisModule,
+      providers: [
+        {
+          provide: Config,
+          useValue: config,
+        },
+      ],
+    };
+  }
+}
