@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "speech-synthesis": {
+      "root": "projects/speech-synthesis",
+      "sourceRoot": "projects/speech-synthesis/src",
+      "projectType": "library",
+      "prefix": "syn",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/speech-synthesis/tsconfig.lib.json",
+            "project": "projects/speech-synthesis/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/speech-synthesis/src/test.ts",
+            "tsConfig": "projects/speech-synthesis/tsconfig.spec.json",
+            "karmaConfig": "projects/speech-synthesis/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/speech-synthesis/tsconfig.lib.json",
+              "projects/speech-synthesis/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-speech-synthesis"

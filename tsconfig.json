@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "speech-synthesis": [
+        "dist/speech-synthesis"
+      ],
+      "speech-synthesis/*": [
+        "dist/speech-synthesis/*"
+      ]
+    }
   }
 }
