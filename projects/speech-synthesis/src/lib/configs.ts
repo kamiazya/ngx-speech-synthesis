@@ -4,8 +4,16 @@ export type SpeechSynthesisUtteranceEventHandler = ((this: SpeechSynthesisUttera
 
 export type SpeechSynthesisUtteranceErrorEventHandler = ((this: SpeechSynthesisUtterance, ev: SpeechSynthesisErrorEvent) => any) | null;
 
-export interface SpeechSynthesisUtteranceConfig {
+export interface SpeechSynthesisUtteranceParams {
   lang?: string;
+  pitch?: number;
+  rate?: number;
+  text?: string;
+  voice?: SpeechSynthesisVoice;
+  volume?: number;
+}
+
+export interface SpeechSynthesisUtteranceConfig extends SpeechSynthesisUtteranceParams {
   onboundary?: SpeechSynthesisUtteranceEventHandler;
   onend?: SpeechSynthesisUtteranceEventHandler;
   onerror?: SpeechSynthesisUtteranceErrorEventHandler;
@@ -13,11 +21,6 @@ export interface SpeechSynthesisUtteranceConfig {
   onpause?: SpeechSynthesisUtteranceEventHandler;
   onresume?: SpeechSynthesisUtteranceEventHandler;
   onstart?: SpeechSynthesisUtteranceEventHandler;
-  pitch?: number;
-  rate?: number;
-  text?: string;
-  voice?: SpeechSynthesisVoice;
-  volume?: number;
 }
 
 
@@ -33,4 +36,5 @@ export const OnPauseHandler    = new InjectionToken<SpeechSynthesisUtteranceEven
 export const OnResumeHandler   = new InjectionToken<SpeechSynthesisUtteranceEventHandler>('speech-synthesis.onresume');
 export const OnMarkHandler     = new InjectionToken<SpeechSynthesisUtteranceEventHandler>('speech-synthesis.onmark');
 export const OnBoundaryHandler = new InjectionToken<SpeechSynthesisUtteranceEventHandler>('speech-synthesis.onboundary');
+export const Params            = new InjectionToken<SpeechSynthesisUtteranceParams>('speech-synthesis.params');
 export const Config            = new InjectionToken<SpeechSynthesisUtteranceConfig>('speech-synthesis.config');

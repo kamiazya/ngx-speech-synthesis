@@ -16,6 +16,7 @@ import {
   SpeechSynthesisUtteranceEventHandler,
   SpeechSynthesisUtteranceConfig,
   Config,
+  SpeechSynthesisUtteranceErrorEventHandler,
 } from '../configs';
 
 /** @dynamic */
@@ -103,7 +104,7 @@ export class SpeechSynthesisUtteranceFactoryService {
      * Fired if there was an error that prevented successful speaking of this utterance.
      * If this event fires, the end event must not be fired for this utterance.
      */
-    public onerror?: SpeechSynthesisUtteranceEventHandler,
+    public onerror?: SpeechSynthesisUtteranceErrorEventHandler,
 
     @Optional() @Inject(OnPauseHandler)
     /**
@@ -133,23 +134,7 @@ export class SpeechSynthesisUtteranceFactoryService {
      * The user agent must fire this event if the speech synthesis engine provides the event.
      */
     public onboundary?: SpeechSynthesisUtteranceEventHandler,
-  ) {
-
-    console.log({
-      'this.lang': this.lang,
-      'this.voice': this.voice,
-      'this.volume': this.volume,
-      'this.rate': this.rate,
-      'this.pitch': this.pitch,
-      'this.onstart': this.onstart,
-      'this.onend': this.onend,
-      'this.onerror': this.onerror,
-      'this.onpause': this.onpause,
-      'this.onresume': this.onresume,
-      'this.onmark': this.onmark,
-      'this.onboundary': this.onboundary,
-    });
-  }
+  ) { }
 
   /**
    * This attribute specifies the text to be synthesized and spoken for this utterance.
@@ -159,7 +144,7 @@ export class SpeechSynthesisUtteranceFactoryService {
    * the tags they do not support and speak the text. There may be a maximum length of the text,
    * it may be limited to 32,767 characters.
    */
-  text(text: string): SpeechSynthesisUtterance {
+  public text(text: string): SpeechSynthesisUtterance {
     const utterance = new SpeechSynthesisUtterance(text);
 
     utterance.lang       = this.lang       || this.config.lang       || null;
