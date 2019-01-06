@@ -1,0 +1,55 @@
+h2 {
+  font-size: 18px;
+}
+
+:host {
+  mat-card {
+    margin-bottom: 20px;
+  }
+
+  mat-card:last-child {
+    margin-bottom: 0;
+  }
+
+  #manuscript-selector {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0 20px 20px;
+    white-space: nowrap;
+    background-color: #eff0f1
+    ;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    mat-card {
+      margin-left: 20px;
+      flex: 0 0 160px;
+      white-space: normal;
+      word-wrap: break-word;
+      box-sizing: border-box;
+    }
+    mat-card.selecting {
+      border: 1.5px solid blue;
+    }
+
+    mat-card:last-child {
+      position: relative;
+    }
+    mat-card:last-child::after {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 20px;
+      height: 1px;
+      content: '';
+    }
+
+  }
+
+  #selecting-manuscript {
+    mat-card-content > * {
+      margin-bottom: 10px;
+    }
+  }
+
+}
