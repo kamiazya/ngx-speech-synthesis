@@ -1,6 +1,6 @@
-# NgxSpeechSynthesis
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/082267c017e047a7b9ecb888d0779860)](https://app.codacy.com/app/kamiazya/ngx-speech-synthesis?utm_source=github.com&utm_medium=referral&utm_content=kamiazya/ngx-speech-synthesis&utm_campaign=Badge_Grade_Dashboard) [![Maintainability](https://api.codeclimate.com/v1/badges/9723b4dde56568506ec5/maintainability)](https://codeclimate.com/github/kamiazya/ngx-speech-synthesis/maintainability)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/082267c017e047a7b9ecb888d0779860)](https://app.codacy.com/app/kamiazya/ngx-speech-synthesis?utm_source=github.com&utm_medium=referral&utm_content=kamiazya/ngx-speech-synthesis&utm_campaign=Badge_Grade_Dashboard)
+# SpeechSynthesis
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.1.
 
