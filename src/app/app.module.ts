@@ -16,6 +16,7 @@ import {
 } from '@angular/material';
 import { SpeechSynthesisDemoComponent } from './components/speech-synthesis-demo/speech-synthesis-demo.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,6 @@ import { SpeechSynthesisDemoComponent } from './components/speech-synthesis-demo
     }),
     BrowserAnimationsModule,
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

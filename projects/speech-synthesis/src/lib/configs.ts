@@ -25,7 +25,7 @@ export interface SpeechSynthesisUtteranceConfig extends SpeechSynthesisUtterance
 
 
 export const Lang              = new InjectionToken<string>('speech-synthesis.lang');
-export const Voice             = new InjectionToken<string>('speech-synthesis.voice');
+export const Voice             = new InjectionToken<string | SpeechSynthesisVoice>('speech-synthesis.voice');
 export const Volume            = new InjectionToken<number>('speech-synthesis.volume');
 export const Rate              = new InjectionToken<boolean>('speech-synthesis.rate');
 export const Pitch             = new InjectionToken<number>('speech-synthesis.pitch');

@@ -11,7 +11,10 @@ import { Observable, ReplaySubject } from 'rxjs';
 @Component({
   selector: 'app-speech-synthesis-demo',
   templateUrl: './speech-synthesis-demo.component.html',
-  styleUrls: ['./speech-synthesis-demo.component.scss']
+  styleUrls: ['./speech-synthesis-demo.component.scss'],
+  providers: [
+    SpeechSynthesisUtteranceFactoryService,
+  ],
 })
 export class SpeechSynthesisDemoComponent implements OnInit {
 
