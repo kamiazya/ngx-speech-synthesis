@@ -1,11 +1,17 @@
 {
   "name": "@kamiazya/speech-synthesis",
   "version": "0.0.1",
+  "repository": "https://github.com/kamiazya/ngx-speech-synthesis.git",
+  "author": "kamiazya <yuki@kamiazya.tech>",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "webspeechapi",
+    "speech-synthesis"
+  ],
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0"
   },
-  "devDependencies": {
-    "@types/webspeechapi": "^0.0.29"
-  }
+  "devDependencies": {}
 }
