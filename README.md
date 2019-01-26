@@ -1,6 +1,7 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/082267c017e047a7b9ecb888d0779860)](https://app.codacy.com/app/kamiazya/ngx-speech-synthesis?utm_source=github.com&utm_medium=referral&utm_content=kamiazya/ngx-speech-synthesis&utm_campaign=Badge_Grade_Dashboard) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkamiazya%2Fngx-speech-synthesis.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkamiazya%2Fngx-speech-synthesis?ref=badge_shield)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/082267c017e047a7b9ecb888d0779860)](https://app.codacy.com/app/kamiazya/ngx-speech-synthesis?utm_source=github.com&utm_medium=referral&utm_content=kamiazya/ngx-speech-synthesis&utm_campaign=Badge_Grade_Dashboard) [![Maintainability](https://api.codeclimate.com/v1/badges/9723b4dde56568506ec5/maintainability)](https://codeclimate.com/github/kamiazya/ngx-speech-synthesis/maintainability) [![CodeFactor](https://www.codefactor.io/repository/github/kamiazya/ngx-speech-synthesis/badge)](https://www.codefactor.io/repository/github/kamiazya/ngx-speech-synthesis) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkamiazya%2Fngx-speech-synthesis.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkamiazya%2Fngx-speech-synthesis?ref=badge_shield)
 
 # SpeechSynthesis
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.1.
 
 ## Development server
@@ -29,4 +30,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## License
+
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkamiazya%2Fngx-speech-synthesis.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkamiazya%2Fngx-speech-synthesis?ref=badge_large)
