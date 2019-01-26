@@ -2,17 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { SpeechSynthesisModule } from 'speech-synthesis';
+import { SpeechSynthesisModule } from '../../projects/speech-synthesis/src/public_api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import {
   MatToolbarModule,
-  MatCardModule,
-  MatDividerModule,
-  MatSliderModule,
-  MatSelectModule,
-  MatIconModule,
-  MatButtonModule,
 } from '@angular/material';
 import { SpeechSynthesisDemoComponent } from './components/speech-synthesis-demo/speech-synthesis-demo.component';
 
@@ -26,12 +20,6 @@ import { SpeechSynthesisDemoComponent } from './components/speech-synthesis-demo
     BrowserModule,
     FormsModule,
     MatToolbarModule,
-    MatCardModule,
-    MatDividerModule,
-    MatSliderModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatIconModule,
     SpeechSynthesisModule.forRoot({
       lang: 'ja',
       volume: 1.0,

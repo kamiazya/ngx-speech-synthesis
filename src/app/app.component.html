@@ -2,5 +2,24 @@
   <span>ngx-speech-synthesis Demo</span>
 </mat-toolbar>
 <main>
-  <app-speech-synthesis-demo></app-speech-synthesis-demo>
+  <app-speech-synthesis-demo
+    [content]="content"
+    [lang]="lang"
+  ></app-speech-synthesis-demo>
+  <div>
+    <h2>
+      Other Contents
+    </h2>
+    <div>
+      <div id="manuscript-selector">
+        <div
+          *ngFor="let manuscript of manuscripts; let i = index"
+          [ngClass]="{manuscript: true, selecting: i === selectingIndex}"
+          (click)="selectByIndex(i)">
+          <h4>{{manuscript.lang}}</h4>
+          <pre>{{manuscript.content}}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>

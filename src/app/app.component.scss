@@ -1,3 +1,44 @@
 main {
   margin: 10px;
+
+  & > * {
+    margin: 10px;
+  }
+}
+
+#manuscript-selector {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0 20px 20px;
+  white-space: nowrap;
+  background-color: #eff0f1
+  ;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  .manuscript {
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 20px;
+    flex: 0 0 160px;
+    white-space: normal;
+    word-wrap: break-word;
+    box-sizing: border-box;
+  }
+  .manuscript.selecting {
+    border: 1.5px solid blue;
+  }
+
+  .manuscript:last-child {
+    position: relative;
+  }
+  .manuscript:last-child::after {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 20px;
+    height: 1px;
+    content: '';
+  }
+
 }

@@ -1,48 +1,43 @@
 <div>
-  <mat-card id="selecting-manuscript">
-    <mat-card-title>Content</mat-card-title>
-    <mat-card-content>
-      <p *ngFor="let text of selectingManuscript.contents">{{text}}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button (click)="speech()">
-        <mat-icon>play_arrow</mat-icon>
+  <div id="selecting-manuscript" *ngIf="contentTexts">
+    <h2>Content({{lang}})</h2>
+    <div>
+      <p *ngFor="let text of contentTexts">{{text}}</p>
+    </div>
+    <div>
+      <button (click)="speech()">
         speech
       </button>
-      <button mat-button (click)="resume()">
-        <mat-icon>play_arrow</mat-icon>
+      <button (click)="resume()">
         resume
       </button>
-
-      <button mat-button (click)="pause()">
-        <mat-icon>pause</mat-icon>
+      <button (click)="pause()">
         pause
       </button>
-      <button mat-button (click)="cancel()">
-        <mat-icon>stop</mat-icon>
+      <button (click)="cancel()">
         cancel
       </button>
-    </mat-card-actions>
+    </div>
 
-  </mat-card>
-  <mat-card>
-    <mat-card-title>Setting</mat-card-title>
-    <mat-card-content>
-      <h2>Pitch {{f.pitch}}</h2>
+  </div>
+  <div *ngIf="setting">
+    <h2>Setting</h2>
+    <div>
+      <h3>Pitch {{f.pitch}}</h3>
       <p>This attribute specifies the speaking pitch for the utterance.</p>
       <p>It ranges between 0 and 2 inclusive, with 0 being the lowest pitch and 2 the highest pitch.</p>
       <p>1 corresponds to the default pitch of the speech synthesis engine or specific voice.</p>
       <p>Speech synthesis engines or voices may constrain the minimum and maximum rates further.</p>
       <p>If SSML is used, this value will be overridden by prosody tags in the markup.</p>
-      <mat-slider
+      <input
+        type="number"
         [(ngModel)]="f.pitch"
         [min]="0"
         [max]="2"
         [step]="0.1"
-        [thumbLabel]="true"
-        ></mat-slider>
-      <mat-divider [inset]="true"></mat-divider>
-      <h2>Rate {{f.rate}}</h2>
+        />
+      <hr>
+      <h3>Rate {{f.rate}}</h3>
       <p>This attribute specifies the speaking rate for the utterance.</p>
       <p>It is relative to the default rate for this voice.</p>
       <p>1 is the default rate supported by the speech synthesis engine or specific voice</p>
@@ -52,16 +47,16 @@
       <p>for example, a particular voice may not actually speak faster than 3 times normal</p>
       <p>even if you specify a value larger than 3.</p>
       <p>If SSML is used, this value will be overridden by prosody tags in the markup.</p>
-      <mat-slider
+      <input
+        type="number"
         [(ngModel)]="f.rate"
         [min]="1"
         [max]="5"
         [step]="0.1"
-        [thumbLabel]="true"
-        ></mat-slider>
+        >
 
-      <mat-divider [inset]="true"></mat-divider>
-      <h2>Voice</h2>
+      <hr>
+      <h3>Voice</h3>
       <p>This attribute specifies the speech synthesis voice that the web application wishes to use.</p>
       <p>When a SpeechSynthesisUtterance object is created this attribute must be initialized to null.</p>
       <p>If, at the time of the speak() method call,</p>
@@ -71,30 +66,12 @@
       <p>The user agent default voice should support the current language (see lang) and</p>
       <p>can be a local or remote speech service and can incorporate end user choices via interfaces</p>
       <p>provided by the user agent such as browser configuration parameters.</p>
-      <mat-select [(ngModel)]="f.voice">
-        <mat-option
+      <select [(ngModel)]="f.voice">
+        <option
           *ngFor="let voice of getVoices$() | async"
           [value]="voice"
-        >{{voice.name}}</mat-option>
-      </mat-select>
-    </mat-card-content>
-  </mat-card>
-  <mat-card>
-    <mat-card-title>
-      Other Contents
-    </mat-card-title>
-    <mat-card-content>
-      <div id="manuscript-selector">
-        <mat-card
-          *ngFor="let manuscript of manuscripts; let i = index"
-          [ngClass]="{selecting: i === selectingIndex}"
-          (click)="selectByIndex(i)">
-          <mat-card-subtitle>{{manuscript.lang}}</mat-card-subtitle>
-          <mat-card-content>
-            <p *ngFor="let text of manuscript.contents">{{text}}</p>
-          </mat-card-content>
-        </mat-card>
-      </div>
-    </mat-card-content>
-  </mat-card>
+        >{{voice.name}}</option>
+      </select>
+    </div>
+  </div>
 </div>

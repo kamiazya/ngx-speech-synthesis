@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges, EventEmitter, Output } from '@angular/core';
 import {
   SpeechSynthesisUtteranceFactoryService,
   SpeechSynthesisService,
-} from 'speech-synthesis';
+} from '../../../../projects/speech-synthesis/src/public_api';
 
-import { manuscripts, Manuscript } from './manuscripts';
 import { Observable, ReplaySubject } from 'rxjs';
 
 
@@ -16,33 +15,42 @@ import { Observable, ReplaySubject } from 'rxjs';
     SpeechSynthesisUtteranceFactoryService,
   ],
 })
-export class SpeechSynthesisDemoComponent implements OnInit {
-
-  public manuscripts: Manuscript[] = manuscripts;
+export class SpeechSynthesisDemoComponent implements OnInit, OnChanges {
 
   constructor(
     public f: SpeechSynthesisUtteranceFactoryService,
     public svc: SpeechSynthesisService,
   ) { }
 
-  selectingIndex = 0;
+  @Input()
+  content = '';
 
-  selectingManuscript: Manuscript;
 
-  ngOnInit() {
-    this.selectByIndex(0);
+  @Input()
+  lang = '';
+
+  @Input()
+  setting = false;
+
+  @Output()
+  utterance = new EventEmitter<SpeechSynthesisUtterance>();
+
+  ngOnChanges(_: SimpleChanges) {
+    this.f.lang = this.lang;
   }
 
-  selectByIndex(index: number) {
-    this.selectingIndex = index;
-    this.selectingManuscript = this.manuscripts[this.selectingIndex];
-    this.f.lang = this.selectingManuscript.lang;
+  get contentTexts(): string[] {
+    return this.content.split('\n');
+  }
+
+  ngOnInit() {
   }
 
   speech() {
-    for (const text of this.selectingManuscript.contents) {
+    for (const text of this.contentTexts) {
       const v = this.f.text(text);
-      console.log(text, v);
+      // console.log(text, v);
+      this.utterance.emit(v);
       this.svc.speak(this.f.text(text));
     }
   }

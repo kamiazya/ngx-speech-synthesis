@@ -8,7 +8,9 @@
     "build:lib": "ng build speech-synthesis",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +37,7 @@
     "@angular/cli": "~7.2.3",
     "@angular/compiler-cli": "~7.2.2",
     "@angular/language-service": "~7.2.2",
+    "@storybook/cli": "^4.1.11",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~10.12.18",
@@ -52,6 +55,13 @@
     "tsickle": ">=0.29.0",
     "tslib": "^1.9.0",
     "tslint": "~5.12.1",
-    "typescript": "~3.2.4"
+    "typescript": "~3.2.4",
+    "@babel/core": "^7.2.2",
+    "babel-loader": "^8.0.5",
+    "@storybook/angular": "^4.1.11",
+    "@storybook/addon-notes": "^4.1.11",
+    "@storybook/addon-actions": "^4.1.11",
+    "@storybook/addon-links": "^4.1.11",
+    "@storybook/addons": "^4.1.11"
   }
 }
