@@ -2,32 +2,143 @@
 
 # SpeechSynthesis
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.1.
+Angular 7+ speech synthesis service (based on browser implementation such as Chrome).
 
-## Development server
+[![NPM](https://nodei.co/npm/%40kamiazya/ngx-speech-synthesis.png)](https://nodei.co/npm/%40kamiazya/ngx-speech-synthesis/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Demo
 
-## Code scaffolding
+See [storybook](https://kamiazya.github.io/ngx-speech-synthesis/?selectedKind=DEMO&selectedStory=English&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## See
 
-## Build
+[Support Browsers](https://caniuse.com/#feat=speech-synthesis)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+[Web Speech API -- MDN](https://developer.mozilla.org/docs/Web/API/Web_Speech_API)
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### yarn
 
-## Running end-to-end tests
+```bash
+$ yarn add @kamiazya/ngx-speech-synthesis
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### npm
 
-## Further help
+```bash
+$ npm install --save @kamiazya/ngx-speech-synthesis
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Setup
 
+### Module
+
+```typescript
+import { NgModule } from '@angular/core';
+
+import {
+  SpeechSynthesisModule,
+} from '@kamiazya/ngx-speech-synthesis';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    AppDemoComponent
+  ],
+  imports: [
+    BrowserModule,
+    SpeechSynthesisModule.forRoot({
+      lang: 'en',
+      volume: 1.0,
+      pitch: 1.0,
+      rate: 1.0,
+    }),
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
+
+## API
+
+```typescript
+import { Component, NgModule } from '@angular/core';
+
+import {
+  SpeechSynthesisUtteranceFactoryService,
+  SpeechSynthesisService,
+} from '@kamiazya/ngx-speech-synthesis';
+
+@Component({
+  template: `
+    <div>
+      <p *ngFor="let text of contents">{{text}}</p>
+    </div>
+    <div>
+      <button (click)="speech()">
+        speech
+      </button>
+      <button (click)="resume()">
+        resume
+      </button>
+      <button (click)="pause()">
+        pause
+      </button>
+      <button (click)="cancel()">
+        cancel
+      </button>
+    </div>
+  `,
+  providers: [
+    SpeechSynthesisUtteranceFactoryService,
+  ],
+})
+export class AppDemoComponent {
+
+  contents = [
+    'Peter Piper picked a peck of pickled peppers.',
+    'A peck of pickled peppers Peter Piper picked.',
+    'If Peter Piper picked a peck of pickled peppers,',
+    'Where\'s the peck of pickled peppers Peter Piper picked?',
+  ];
+
+  constructor(
+    public f: SpeechSynthesisUtteranceFactoryService,
+    public svc: SpeechSynthesisService,
+  ) { }
+
+  speech() {
+    for (const text of this.contents) {
+      const v = this.f.text(text);
+      this.svc.speak(this.f.text(text));
+    }
+  }
+
+  cancel() {
+    this.svc.cancel();
+  }
+  pause() {
+    this.svc.pause();
+  }
+
+  resume() {
+    this.svc.resume();
+  }
+}
+
+```
+
+## Development
+
+### On Demo App
+
+Run `yarn start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+### On Storybook
+
+Run `yarn storybook` for a dev server. Navigate to `http://localhost:9001/`. The app will automatically reload if you change any of the source files.
 
 ## License
 
