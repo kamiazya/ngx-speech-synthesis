@@ -4,7 +4,7 @@
 
 Angular 7+ speech synthesis service (based on browser implementation such as Chrome).
 
-[![NPM](https://nodei.co/npm/%40kamiazya/ngx-speech-synthesis.png)](https://nodei.co/npm/%40kamiazya/ngx-speech-synthesis/)
+[![NPM](https://nodei.co/npm/@kamiazya/ngx-speech-synthesis.png)](https://nodei.co/npm/@kamiazya/ngx-speech-synthesis/)
 
 ## Demo
 
