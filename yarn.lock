@@ -10,6 +10,14 @@
     "@angular-devkit/core" "7.3.0"
     rxjs "6.3.3"
 
+"@angular-devkit/architect@0.13.3":
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.13.3.tgz#28813279c546cdcb709ad55038bb2051736de668"
+  integrity sha512-89VL75bq3+h3m0jhzWNqXqW+HQcrihnM3i6eiUE6P81LcllP159JMlusAvB1LHLNc6Cc62wTq4BJr7KDILkPOA==
+  dependencies:
+    "@angular-devkit/core" "7.3.3"
+    rxjs "6.3.3"
+
 "@angular-devkit/build-angular@~0.13.0":
   version "0.13.0"
   resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-0.13.0.tgz#b41cd80772b7d0dc71081353a799fdd534bfc885"
@@ -63,13 +71,13 @@
   optionalDependencies:
     node-sass "4.11.0"
 
-"@angular-devkit/build-ng-packagr@~0.13.0":
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-ng-packagr/-/build-ng-packagr-0.13.0.tgz#b02d4793bf6f1720f2defb5fecdca1377c0a15b0"
-  integrity sha512-Up7p300FJS7HJmZOvNZXzYsBRPqMJJKQGaOeINDPBsQFHcxIt4LQmQsqUa/4DEczR9Z2/KhlduXbNI+c7wmlgg==
+"@angular-devkit/build-ng-packagr@~0.13.3":
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-ng-packagr/-/build-ng-packagr-0.13.3.tgz#db7f03e6c6e34d54252d5c410e02e7584554264e"
+  integrity sha512-/jnabl9gALEACrBr7+yZNbIfvuqHy6M05QidD+1jNCh8jirGSCMEKqhvUg1m5tAMt32ZcH8r1GGU0jlfa6L39A==
   dependencies:
-    "@angular-devkit/architect" "0.13.0"
-    "@angular-devkit/core" "7.3.0"
+    "@angular-devkit/architect" "0.13.3"
+    "@angular-devkit/core" "7.3.3"
     rxjs "6.3.3"
     semver "5.6.0"
 
@@ -98,6 +106,17 @@
   integrity sha512-b0qtAUpgqLpWY8W6vWRv1aj6bXkZCP1rvywl8i8TbGMY67CWRcy5J3fNAMmjiZS+LJixFlIXYf4iOydglyJMfg==
   dependencies:
     ajv "6.7.0"
+    chokidar "2.0.4"
+    fast-json-stable-stringify "2.0.0"
+    rxjs "6.3.3"
+    source-map "0.7.3"
+
+"@angular-devkit/core@7.3.3":
+  version "7.3.3"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-7.3.3.tgz#cd6d5a8eca25ef07b6394bc2b08133d90d08d39f"
+  integrity sha512-fosULDtMoDWrOyUzTmBkJccOy7zodo02kENyKai7vOv9EWfv9jytkVdNc+jl0ys9OE2QadvSYBo49jhnZxFXfQ==
+  dependencies:
+    ajv "6.9.1"
     chokidar "2.0.4"
     fast-json-stable-stringify "2.0.0"
     rxjs "6.3.3"
@@ -1621,6 +1640,16 @@ ajv@6.7.0:
   version "6.7.0"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.7.0.tgz#e3ce7bb372d6577bb1839f1dfdfcbf5ad2948d96"
   integrity sha512-RZXPviBTtfmtka9n9sy1N5M5b82CbxWIR6HIis4s3WQTXDJamc/0gpCWNGz6EWdWp4DOfjzJfhz/AS9zVPjjWg==
+  dependencies:
+    fast-deep-equal "^2.0.1"
+    fast-json-stable-stringify "^2.0.0"
+    json-schema-traverse "^0.4.1"
+    uri-js "^4.2.2"
+
+ajv@6.9.1:
+  version "6.9.1"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.9.1.tgz#a4d3683d74abc5670e75f0b16520f70a20ea8dc1"
+  integrity sha512-XDN92U311aINL77ieWHmqCcNlwjoP5cHXDxIxbf2MaPYuCXOHS7gHH8jktxeK5omgd52XbSTX6a4Piwd1pQmzA==
   dependencies:
     fast-deep-equal "^2.0.1"
     fast-json-stable-stringify "^2.0.0"
