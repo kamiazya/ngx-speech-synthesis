@@ -1067,13 +1067,13 @@
     global "^4.3.2"
     prop-types "^15.6.2"
 
-"@storybook/addon-notes@^4.1.11":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-notes/-/addon-notes-4.1.11.tgz#bda018553e007080e73fce2d33495139a57222e5"
-  integrity sha512-Fdc3YIYDVh7+WjcoWEvbyO5qnya4RLGzP2lxvaIllegMHIu8wU0ber7yb7+vRMa4XGbulUm4nU64D+H1liGlQw==
+"@storybook/addon-notes@^4.1.13":
+  version "4.1.13"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-notes/-/addon-notes-4.1.13.tgz#52145af4603085c0958c0c8c377ac6e4507051c0"
+  integrity sha512-3OncSUqPAr433cXtObY0qzeL4Mw3VhseoWOKENZ/031a2qUHDQcz/23UfK6cUaqKBGYle92sb31UfdgtEQycew==
   dependencies:
     "@emotion/styled" "^0.10.6"
-    "@storybook/addons" "4.1.11"
+    "@storybook/addons" "4.1.13"
     core-js "^2.5.7"
     marked "^0.5.2"
     prop-types "^15.6.2"
@@ -1088,7 +1088,7 @@
     global "^4.3.2"
     util-deprecate "^1.0.2"
 
-"@storybook/addons@^4.1.13":
+"@storybook/addons@4.1.13", "@storybook/addons@^4.1.13":
   version "4.1.13"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.1.13.tgz#801cbb6bf7f7b4d494ae20df43b4b8c406b32e19"
   integrity sha512-5WqXwFOc5Oj/ccem7I5FXTWJlCxfgzCgUlWGwkut/ahfuKkcvAPFKuRslReCWLT0sBZl8iap49HgYSNGDztAbA==
