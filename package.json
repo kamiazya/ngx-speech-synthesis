@@ -38,7 +38,7 @@
     "@angular/cli": "~7.3.0",
     "@angular/compiler-cli": "~7.2.6",
     "@angular/language-service": "~7.2.6",
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.4.3",
     "@storybook/addon-actions": "^4.1.11",
     "@storybook/addon-links": "^4.1.11",
     "@storybook/addon-notes": "^4.1.11",
