@@ -1061,17 +1061,18 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
-"@storybook/addon-links@^4.1.11":
-  version "4.1.18"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.1.18.tgz#ad534625baa74c3a5ed97cb430f811a78dfe0f4e"
-  integrity sha512-qWmYl5nJKw8ozH3QdWIZ33MCmiKRBdeSMaY4Pi8v8mzEjTZKxznIFBYpY46uRwE0Rz4dA7/1486zI1r2uju0Xw==
+"@storybook/addon-links@^5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-5.0.11.tgz#59a9ce8acc8d5dd7e5622ff875cafc8fe4d6e865"
+  integrity sha512-ZZibz+ROCGz0I8V20jyj8sUjErnbXlFhp5P5xH3reDbfQQwY7ut7BEm0FHM9ksyUA0MvExWmiKuvNDU5dQPqgA==
   dependencies:
-    "@storybook/addons" "4.1.18"
-    "@storybook/components" "4.1.18"
-    "@storybook/core-events" "4.1.18"
-    core-js "^2.5.7"
+    "@storybook/addons" "5.0.11"
+    "@storybook/core-events" "5.0.11"
+    common-tags "^1.8.0"
+    core-js "^2.6.5"
     global "^4.3.2"
     prop-types "^15.6.2"
+    qs "^6.5.2"
 
 "@storybook/addon-notes@^4.1.11":
   version "4.1.18"
@@ -1091,6 +1092,17 @@
   dependencies:
     "@storybook/channels" "4.1.18"
     "@storybook/components" "4.1.18"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
+
+"@storybook/addons@5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.0.11.tgz#86de70747e0a692d9dd8ea431daa1147d8785697"
+  integrity sha512-zw3vjYa2EfFQKKZd8/o44eVy5xaZpFEBY/4mGMBBTQb57H0X1VTzE4VxHrk7fGPJMdmrPfXbYEiQtfHyO56y+w==
+  dependencies:
+    "@storybook/channels" "5.0.11"
+    "@storybook/client-logger" "5.0.11"
+    core-js "^2.6.5"
     global "^4.3.2"
     util-deprecate "^1.0.2"
 
@@ -1127,6 +1139,13 @@
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.1.18.tgz#343db57866cc09ec61ee609e5149005010d3d4fa"
   integrity sha512-SwAAqfrIu0+j2KmmR9QKwKoU9VS7DWrv7fEhy+fEO/YfHnc0G3jcnR/VooiWfZpSrgKB7Mz6Qjp/mj+wRe6wTg==
 
+"@storybook/channels@5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-5.0.11.tgz#fae33809ed14187e7962bb10b813085c6838538c"
+  integrity sha512-50kaqBZSkB91c5iXtZ8gGQuj3oOAshGXYukvyw9CsQMdcXtw46hX5DNvdBH7E1UCNtbtk91pS0W0YMbP3avmIQ==
+  dependencies:
+    core-js "^2.6.5"
+
 "@storybook/cli@^4.1.11":
   version "4.1.18"
   resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-4.1.18.tgz#0ba22f3b7c9baa94b414026c1fe57ddc4faacf35"
@@ -1152,6 +1171,13 @@
   version "4.1.18"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-4.1.18.tgz#b803177977eab32044f293317dfe22d829f4a32f"
   integrity sha512-hcCcM3zT9+S/osDZTEK/mYU/3dnskVahJ7hSQDDfXKVv4zL3U2l+9PYc2MhEQ4egHxrNsl0pzfvNMFFIGryJtg==
+
+"@storybook/client-logger@5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-5.0.11.tgz#1211421355188f418cc421893f760a2feaf22d27"
+  integrity sha512-UWEdAlihpASAx770jg3JSDPG8ZkH6aiRCpLMwG7PFbfIpi+ZMRUj9SgxTQvj+/FFmzLR+LNBqfGeT8VHF317/g==
+  dependencies:
+    core-js "^2.6.5"
 
 "@storybook/codemod@4.1.18":
   version "4.1.18"
@@ -1182,6 +1208,13 @@
   version "4.1.18"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.1.18.tgz#0c445c9ff72c83cee90efae99dbc6807daab1a12"
   integrity sha512-G4vr1zSDdizbLmBdopBJLcfTYuURUevQ6OokbGqOfWRxfLmfCu2azeeQjWEcbHi9Hu3KThDcSUmapKZYNwNxMw==
+
+"@storybook/core-events@5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-5.0.11.tgz#c7f10df6de6eb9a92cb4fe30b77e956f11b971e6"
+  integrity sha512-hwtazXO9hkoI5vtUm6koJ30+8FzbFuPO35AkAMAue+/OLZWJX3wzQ9gBKR4jOtRcWRRJsaBykltW/VH7b+NoPQ==
+  dependencies:
+    core-js "^2.6.5"
 
 "@storybook/core@4.1.18":
   version "4.1.18"
@@ -4062,7 +4095,7 @@ core-js@^1.0.0:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
   integrity sha1-ZSKUwUZR2yj6k70tX/KYOk8IxjY=
 
-core-js@^2.2.0, core-js@^2.4.0, core-js@^2.5.0, core-js@^2.5.7:
+core-js@^2.2.0, core-js@^2.4.0, core-js@^2.5.0, core-js@^2.5.7, core-js@^2.6.5:
   version "2.6.5"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.5.tgz#44bc8d249e7fb2ff5d00e0341a7ffb94fbf67895"
   integrity sha512-klh/kDpwX8hryYL14M9w/xei6vrv6sE8gTHDG7/T/+SEovB/G4ejwcfE/CBzO6Edsu+OETZMZ3wcX/EjUkrl5A==
