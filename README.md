@@ -143,3 +143,9 @@ Run `yarn storybook` for a dev server. Navigate to `http://localhost:9001/`. The
 ## License
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkamiazya%2Fngx-speech-synthesis.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkamiazya%2Fngx-speech-synthesis?ref=badge_large)
+
+## Author
+
+[kamiazya(Yuki Yamazaki)](https://github.com/kamiazya)
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W5VDNO)
