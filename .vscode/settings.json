@@ -1,0 +1,12 @@
+{
+  "tslint.exclude": [
+    "**/dist/**",
+    "**/docs/**",
+    "**/node_modules/**"
+  ],
+  "markdownlint.config": {
+    "default": true,
+    "MD014": false,
+    "MD041": false
+  }
+}
