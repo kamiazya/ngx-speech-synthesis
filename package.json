@@ -45,7 +45,7 @@
     "@storybook/addons": "^4.1.13",
     "@storybook/angular": "^4.1.11",
     "@storybook/cli": "^4.1.11",
-    "@types/jasmine": "~3.3.9",
+    "@types/jasmine": "~3.3.13",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~12.0.0",
     "babel-loader": "^8.0.6",
