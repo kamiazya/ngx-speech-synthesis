@@ -6,6 +6,7 @@ import {
   SpeechSynthesisModule,
   Pitch,
   Rate,
+  Volume,
 } from '../../projects/speech-synthesis/src/public_api';
 
 import { action } from '@storybook/addon-actions';
@@ -16,12 +17,14 @@ storiesOf('DEMO', module)
   .add('English', () => ({
     moduleMetadata: {
       imports: [
-        SpeechSynthesisModule.forRoot({
-          volume: 1.0,
-          pitch: 1.0,
-          rate: 1.0,
-        }),
+        SpeechSynthesisModule,
+        SpeechSynthesisModule,
         FormsModule,
+      ],
+      providers: [
+        { provide: Volume, useValue: 1.0 },
+        { provide: Pitch, useValue: 1.0 },
+        { provide: Rate, useValue: 1.0 },
       ],
     },
     component: SpeechSynthesisDemoComponent,
