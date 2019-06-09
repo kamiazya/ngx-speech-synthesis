@@ -1,10 +1,13 @@
 {
   "name": "@kamiazya/ngx-speech-synthesis",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Angular 7+ speech synthesis service (based on browser implementation such as Chrome).",
   "repository": "https://github.com/kamiazya/ngx-speech-synthesis.git",
   "author": "kamiazya <yuki@kamiazya.tech>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "angular",
     "webspeechapi",
