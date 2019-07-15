@@ -43,7 +43,7 @@
     "@storybook/addon-links": "^4.1.11",
     "@storybook/addon-notes": "^4.1.11",
     "@storybook/addons": "^4.1.13",
-    "@storybook/angular": "^4.1.11",
+    "@storybook/angular": "^5.0.11",
     "@storybook/cli": "^4.1.11",
     "@types/jasmine": "~3.3.13",
     "@types/jasminewd2": "~2.0.3",
