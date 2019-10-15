@@ -44,7 +44,7 @@
     "@storybook/addon-notes": "^4.1.11",
     "@storybook/addons": "^4.1.13",
     "@storybook/angular": "^4.1.11",
-    "@storybook/cli": "^4.1.11",
+    "@storybook/cli": "^5.2.4",
     "@types/jasmine": "~3.3.13",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~12.0.10",
